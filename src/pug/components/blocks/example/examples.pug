@@ -1,0 +1,42 @@
+include ../../mixins/image.pug
+include ../../mixins/promo-video.pug
+include image-data.pug
+include promo-video-data.pug
+
+
+section.examples
+  .container
+    h2 Примеры использования миксинов и блоков
+    .examples__images
+      h3 Миксин image
+      +image({
+        mediaTablet: image_data.mediaQueries.tablet,
+        mediaDesktop: image_data.mediaQueries.desktop,
+        alt: image_data.image.alt,
+        mobileWidth: image_data.image.mobile.width,
+        mobileHeight: image_data.image.mobile.height,
+        mobileSrc: image_data.image.mobile.src,
+        mobileSrc2x: image_data.image.mobile.src2x,
+        mobileSrcWebp: image_data.image.mobile.srcWebp,
+        mobileSrc2xWebp: image_data.image.mobile.src2xWebp,
+        tabletWidth: image_data.image.tablet.width,
+        tabletHeight: image_data.image.tablet.height,
+        tabletSrc: image_data.image.tablet.src,
+        tabletSrc2x: image_data.image.tablet.src2x,
+        tabletSrcWebp: image_data.image.tablet.srcWebp,
+        tabletSrc2xWebp: image_data.image.tablet.src2xWebp,
+        desktopWidth: image_data.image.desktop.width,
+        desktopHeight: image_data.image.desktop.height,
+        desktopSrc: image_data.image.desktop.src,
+        desktopSrc2x: image_data.image.desktop.src2x,
+        desktopSrcWebp: image_data.image.desktop.srcWebp,
+        desktopSrc2xWebp: image_data.image.desktop.src2xWebp,
+      })
+    .examples__promo-video
+      h3 Миксин promo-video
+      +promo-video(video_data)(class="video__promo", data-video)
+    .examples__form
+      h3 Формы
+      include form.pug
+    .examples__modal
+      include modal.pug

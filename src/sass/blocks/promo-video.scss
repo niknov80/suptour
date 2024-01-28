@@ -1,0 +1,86 @@
+.promo-video {
+  background-color: $color-default-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+}
+
+.promo-video__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.promo-video img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+.promo-video button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 50%;
+  background-color: $color-default-white;
+  background-size: cover;
+  width: 65px;
+  height: 65px;
+  z-index: 2;
+  cursor: pointer;
+
+  @include vp-1199 {
+    width: 90px;
+    height: 90px;
+  }
+
+  @include vp-767 {
+    width: 65px;
+    height: 65px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    background-color: $color-default-white;
+  }
+
+  &:focus {
+    opacity: 0.8;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    opacity: 1;
+    background-color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    background-color: $color-button-bg;
+    pointer-events: none;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-left: 8px;
+    top: 50%;
+    left: 50%;
+    border: 10px solid transparent;
+    border-left: 15px solid $color-default-black;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "@lcooper/pug-lint-config",
+  "requireSpecificAttributes": [{ "img": [ "src", "alt" ]}]
+}

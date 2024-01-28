@@ -1,0 +1,44 @@
+section.form
+  .container
+    h2.form__title Форма
+    form(method="post" action="https://echo.htmlacademy.ru/courses")
+      fieldset
+        legend Checkbox
+        .custom-toggle.custom-toggle--checkbox
+          label Пункт 1
+            input(type="checkbox" id="1" name="1" value="1")
+            span.custom-toggle__icon
+        .custom-toggle.custom-toggle--checkbox
+          label Пункт 2
+            input(type="checkbox" id="2" name="2" value="2")
+            span.custom-toggle__icon
+        .custom-toggle.custom-toggle--checkbox
+          label Пункт 3
+            input(type="checkbox" id="3" name="3" value="3")
+            span.custom-toggle__icon
+        .custom-toggle.custom-toggle--checkbox
+          label Пункт 4
+            input(type="checkbox" id="4" name="4" value="4")
+            span.custom-toggle__icon
+      fieldset
+        legend Radiobutton
+        .custom-toggle.custom-toggle--radio
+          label Пункт 1
+            input(type="radio" id="radio1" name="radio" value="radio1")
+            span.custom-toggle__icon
+        .custom-toggle.custom-toggle--radio
+          label Пункт 2
+            input(type="radio" id="radio2" name="radio" value="radio1")
+            span.custom-toggle__icon
+        .custom-toggle.custom-toggle--radio
+          label Пункт 3
+            input(type="radio" id="radio3" name="radio" value="radio1")
+            span.custom-toggle__icon
+        .custom-toggle.custom-toggle--radio
+          label Пункт 4
+            input(type="radio" id="radio4" name="radio" value="radio1")
+            span.custom-toggle__icon
+      .custom-input
+        label
+          input(type="text" id="input" name="input")
+      button.btn(type="submit") Отправить

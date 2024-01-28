@@ -1,0 +1,10 @@
+extends ../components/layout/layout.pug
+
+block variables
+  - let title = "Главная страница"
+  - let page = "index"
+
+block content
+  main
+    include ../components/blocks/hero.pug
+    include ../components/blocks/about.pug

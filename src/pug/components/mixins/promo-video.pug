@@ -1,0 +1,31 @@
+include image
+
+mixin promo-video(videoData)
+
+  .promo-video&attributes(attributes)
+    .promo-video__wrapper
+      a(href=videoData.videoLink)
+        +image({
+          mediaTablet: videoData.mediaQueries.tablet,
+          mediaDesktop: videoData.mediaQueries.desktop,
+          alt: videoData.image.alt,
+          mobileWidth: videoData.image.mobile.width,
+          mobileHeight: videoData.image.mobile.height,
+          mobileSrc: videoData.image.mobile.src,
+          mobileSrc2x: videoData.image.mobile.src2x,
+          mobileSrcWebp: videoData.image.mobile.srcWebp,
+          mobileSrc2xWebp: videoData.image.mobile.src2xWebp,
+          tabletWidth: videoData.image.tablet.width,
+          tabletHeight: videoData.image.tablet.height,
+          tabletSrc: videoData.image.tablet.src,
+          tabletSrc2x: videoData.image.tablet.src2x,
+          tabletSrcWebp: videoData.image.tablet.srcWebp,
+          tabletSrc2xWebp: videoData.image.tablet.src2xWebp,
+          desktopWidth: videoData.image.desktop.width,
+          desktopHeight: videoData.image.desktop.height,
+          desktopSrc: videoData.image.desktop.src,
+          desktopSrc2x: videoData.image.desktop.src2x,
+          desktopSrcWebp: videoData.image.desktop.srcWebp,
+          desktopSrc2xWebp: videoData.image.desktop.src2xWebp,
+        })
+      button(type="button", aria-label="Запустить видео")

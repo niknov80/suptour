@@ -1,0 +1,26 @@
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 40px;
+}
+
+.social__item {
+  list-style-type: none;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $color-icon-bg;
+  width: 40px;
+  height: 40px;
+
+  transition: all $trans-default;
+
+  @include hover-focus {
+    filter: drop-shadow($color-shadow);
+  }
+}

@@ -1,0 +1,49 @@
+@mixin text-play-48-56-400 {
+  font-family: $ff-play;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 400;
+}
+
+@mixin text-play-43-50-400 {
+  font-family: $ff-play;
+  font-size: 43px;
+  line-height: 50px;
+  font-weight: 400;
+}
+
+@mixin text-play-24-28-400 {
+  font-family: $ff-play;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: -0.72px;
+}
+
+@mixin text-play-23-27-400 {
+  font-family: $ff-play;
+  font-size: 23px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+@mixin text-play-18-21-400 {
+  font-family: $ff-play;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+@mixin text-play-16-19-400 {
+  font-family: $ff-play;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+@mixin text-play-16-10-400 {
+  font-family: $ff-play;
+  font-size: 16px;
+  line-height: 10.88px;
+  font-weight: 400;
+}

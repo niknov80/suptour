@@ -1,0 +1,40 @@
+.btn {
+  display: inline-flex;
+  border-radius: $radius-default;
+  cursor: pointer;
+
+  transition:
+    background-color $trans-default,
+    color $trans-default;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    background-color: $color-button-bg;
+    color: $color-text-dark;
+  }
+}
+
+.btn--outline {
+  border: 1px solid $color-button-border;
+  padding: 9px 15px;
+  background-image: none;
+
+  @include hover-focus {
+    background-image: none;
+  }
+}
+
+.btn--solid {
+  @include text-play-16-10-400;
+
+  background-color: $color-button-bg-solid;
+  border: none;
+  color: $color-text-dark;
+  filter: drop-shadow($color-shadow);
+
+  padding: 19px 35px 21px;
+}
