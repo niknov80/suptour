@@ -12,6 +12,20 @@
   font-weight: 400;
 }
 
+@mixin text-play-36-44-400 {
+  font-family: $ff-play;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 400;
+}
+
+@mixin text-play-28-34-400 {
+  font-family: $ff-play;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 400;
+}
+
 @mixin text-play-24-28-400 {
   font-family: $ff-play;
   font-size: 24px;
@@ -24,6 +38,20 @@
   font-family: $ff-play;
   font-size: 23px;
   line-height: 27px;
+  font-weight: 400;
+}
+
+@mixin text-play-22-26-400 {
+  font-family: $ff-play;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+@mixin text-play-20-24-400 {
+  font-family: $ff-play;
+  font-size: 20px;
+  line-height: 24px;
   font-weight: 400;
 }
 
@@ -46,4 +74,48 @@
   font-size: 16px;
   line-height: 10.88px;
   font-weight: 400;
+}
+
+@mixin title-1 {
+  @include text-play-48-56-400;
+
+  @include tablet {
+    @include text-play-36-44-400;
+  }
+
+  @include mobile {
+    @include text-play-28-34-400;
+  }
+}
+
+@mixin title-2 {
+  @include text-play-43-50-400;
+
+  @include tablet {
+    @include text-play-36-44-400;
+  }
+
+  @include mobile {
+    @include text-play-28-34-400;
+  }
+}
+
+@mixin subtitle {
+  @include text-play-24-28-400;
+
+  @include tablet {
+    @include text-play-22-26-400;
+  }
+}
+
+@mixin description {
+  @include text-play-23-27-400;
+
+  @include tablet {
+    @include text-play-20-24-400;
+  }
+
+  @include mobile {
+    @include text-play-18-21-400;
+  }
 }

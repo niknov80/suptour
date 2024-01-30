@@ -3,4 +3,10 @@
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 1;
+
+  &--show-menu {
+    background-color: $color-bg-primary;
+    padding-bottom: 35px;
+  }
 }

@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {isWebP} from './utils/webp.js';
+import {detectedScript, toggleClickHandler} from './modules/menu.js';
 
 // ---------------------------------
 
@@ -10,6 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   isWebP();
+  detectedScript();
+  toggleClickHandler();
 
   // Modules
   // ---------------------------------

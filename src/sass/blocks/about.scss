@@ -1,16 +1,26 @@
 .about {
   padding-top: 90px;
   padding-bottom: 130px;
+
+  @include mobile {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .about__wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 40px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .about__title {
-  @include text-play-43-50-400;
+  @include title-2;
   position: relative;
 
   grid-column: 1 / 7;
@@ -31,13 +41,17 @@
 }
 
 .about__description {
-  @include text-play-23-27-400;
+  @include description;
 
   grid-column: 1 / 7;
   grid-row: 2 / 3;
   color: $color-text-light;
   margin-top: 0;
   margin-bottom: 30px;
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
 }
 
 .about__list {
@@ -53,6 +67,18 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
+
+  @include tablet {
+    align-self: start;
+    margin-bottom: 30px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+  }
 }
 
 .about__item {
@@ -63,6 +89,12 @@
   padding: 27px 25px 32px;
   border: 1px solid $orange;
   border-radius: $radius-default;
+
+  @include mobile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 5px;
+  }
 }
 
 .about__number {
@@ -79,4 +111,11 @@
 .about__wrapper picture {
   grid-column: 7 / 13;
   grid-row: 1 / 4;
+}
+
+.about__wrapper img {
+  @include tablet {
+    width: 100%;
+    height: auto;
+  }
 }

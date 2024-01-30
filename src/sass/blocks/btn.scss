@@ -12,7 +12,12 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
+  &:hover {
+    background-color: $color-button-bg;
+    color: $color-text-dark;
+  }
+
+  &:focus {
     background-color: $color-button-bg;
     color: $color-text-dark;
   }
@@ -23,8 +28,20 @@
   padding: 9px 15px;
   background-image: none;
 
-  @include hover-focus {
+  &:hover {
     background-image: none;
+  }
+
+  &:focus {
+    background-image: none;
+  }
+
+  &:active {
+    background-image: none;
+  }
+
+  @include mobile {
+    justify-content: center;
   }
 }
 

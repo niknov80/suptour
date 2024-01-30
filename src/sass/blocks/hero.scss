@@ -1,8 +1,27 @@
 .hero {
-  background-image: url("../img/common/canyon.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 830px;
+
+  @include tablet {
+    min-height: unset;
+  }
+}
+
+.no-webp .hero {
+  background-image: url("../img/common/canyon.jpg");
+
+  @include retina {
+    background-image: url("../img/common/canyon@2x.jpg");
+  }
+}
+
+.webp .hero {
+  background-image: url("../img/common/canyon.webp");
+
+  @include retina {
+    background-image: url("../img/common/canyon@2x.webp");
+  }
 }
 
 .hero__wrapper {
@@ -11,19 +30,35 @@
   column-gap: 40px;
   padding-top: 260px;
   padding-bottom: 50px;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 165px;
+  }
 }
 
 .hero__block {
   grid-column: 1 / 10;
+
+  @include tablet {
+    grid-column: 1 / 12;
+    padding-bottom: 100px;
+  }
+
+  @include mobile {
+    padding-bottom: 60px;
+  }
 }
 
 .hero__title {
-  @include text-play-48-56-400;
+  @include title-1;
+
   margin-top: 0;
 }
 
 .hero__description {
-  @include text-play-24-28-400;
+  @include subtitle;
 
   margin-top: 0;
   margin-bottom: 45px;
@@ -33,5 +68,5 @@
   grid-column: 12 / 13;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 40px;
+  padding-left: 0;
 }
