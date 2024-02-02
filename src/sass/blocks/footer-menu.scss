@@ -1,0 +1,44 @@
+.footer-menu {
+  display: flex;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  gap: 50px;
+  flex-wrap: wrap;
+
+  @include tablet {
+    gap: 25px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+.footer-menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  list-style-type: none;
+}
+
+.footer-menu__link {
+  @include text-righteous-18-22-400;
+
+  width: 100%;
+  transition: opacity $trans-default;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

@@ -1,20 +1,21 @@
 header.header
   .container
-    nav.site-nav.site-nav--closed.no-js
-      button.site-nav__toggler
+    .site-nav.site-nav--closed.no-js(data-burger-menu)
+      button.site-nav__toggler(data-burger)
       a.site-nav__logo.logo(href="#")
         img.logo__img(width=106, height=37, src="img/logo.svg", alt="Логотип")
-      ul.site-nav__list.site-nav__list--menu
-        li.site-nav__item
-          a.site-nav__link(href="#about") О нас
-        li.site-nav__item
-          a.site-nav__link(href="#gallery") Галерея
-        li.site-nav__item
-          a.site-nav__link(href="#choice") Выбор тура
-        li.site-nav__item
-          a.site-nav__link(href="#why") Почему мы?
-      ul.site-nav__list.site-nav__list--call
-        li.site-nav__item
-          a.site-nav__link.btn.btn--outline(href="#") Перезвонить вам?
-        li.site-nav__item
-          a.site-nav__link.site-nav__link--phone(href="tel:+74952490044") +7 495-249-00-44
+      nav.site-nav__menu.menu
+        ul.menu__list
+          li.menu__item
+            a.menu__link(href="#about") О нас
+          li.menu__item
+            a.menu__link(href="#") Галерея
+          li.menu__item
+            a.menu__link(href="#choice") Выбор тура
+          li.menu__item
+            a.menu__link(href="#") Почему мы?
+      ul.site-nav__call.call-menu
+        li.call-menu__item
+          a.call-menu__link.btn.btn--outline(href="#") Перезвонить вам?
+        li.call-menu__item
+          a.call-menu__link.call-menu__link--phone(href="tel:+74952490044") +7 495-249-00-44

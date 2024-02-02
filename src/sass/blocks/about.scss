@@ -108,14 +108,16 @@
   text-align: center;
 }
 
-.about__wrapper picture {
+.about__picture {
   grid-column: 7 / 13;
   grid-row: 1 / 4;
+  box-shadow: 0 8px 31px 8px rgba(202, 202, 202, 0.25);
+  border-radius: $radius-default;
+  overflow: hidden;
 }
 
-.about__wrapper img {
-  @include tablet {
-    width: 100%;
-    height: auto;
-  }
+.about__picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

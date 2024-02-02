@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 15px;
   padding-left: 0;
+  align-items: end;
 
   @include mobile {
     flex-direction: row;
@@ -22,13 +23,17 @@
   width: 40px;
   height: 40px;
 
-  transition: all $trans-default;
+  transition: transform $trans-600;
 
   &:hover {
-    filter: drop-shadow($color-shadow-secondary);
+    transform: scale(1.1);
   }
 
   &:focus {
-    filter: drop-shadow($color-shadow-secondary);
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1.1);
   }
 }

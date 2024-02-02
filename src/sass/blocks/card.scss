@@ -1,0 +1,74 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $black-87;
+  border-radius: $radius-default;
+  box-shadow: $color-shadow-card;
+  padding: 45px 20px;
+}
+
+.card__title {
+  @include text-play-30-35-400;
+
+  color: $light-grey;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include tablet {
+    @include text-play-24-28-400;
+  }
+
+  @include mobile {
+    @include text-play-22-26-400;
+  }
+}
+
+.card__age {
+  @include text-play-16-19-400;
+  color: $light-grey;
+  margin-top: 0;
+
+  @include tablet {
+    @include text-play-14-15-400;
+  }
+}
+
+.card__description {
+  @include text-play-23-27-400;
+
+  position: relative;
+  color: $light-grey;
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 75px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 143px;
+    left: 50%;
+    top: -35px;
+    transform: translateX(-50%);
+    background-color: $orange;
+  }
+
+  @include mobile {
+    @include text-play-16-19-400;
+    margin-bottom: 45px;
+  }
+}
+
+.card__price {
+  @include text-play-35-35-400;
+
+  margin-top: auto;
+  color: $white;
+  margin-bottom: 55px;
+}
+
+.card__price span {
+  @include text-play-16-10-400;
+}

@@ -1,14 +1,20 @@
 // Colors
 $transparent: rgba(255, 255, 255, 0);
 $white: #ffffff;
+$white-47: rgba(255, 255, 255, 0.47);
 $black: #000000;
 $black-20: rgba(0, 0, 0, 0.2);
+$black-25: rgba(0, 0, 0, 0.35);
+$black-87: rgba(0, 0, 0, 0.87);
 $red: #ff121f;
+$yellow: #ffff00;
 $orange: #ffbf1a;
 $orange-87: rgba(255, 191, 26, 0.87);
+$orange-40: rgba(255, 191, 26, 0.4);
 $grey: #b6b6b6;
 $light-grey: #d1d1d1;
-
+$dark-grey: #8a8a8a;
+$yellow-grey-18: rgba(153, 137, 102, 0.18);
 // ---------------------------------
 
 // Default
@@ -28,6 +34,7 @@ $color-text-light: $light-grey;
 $color-button-border: $white;
 $color-button-bg: $white;
 $color-button-bg-solid: $orange-87;
+$color-button-bg-hover: $yellow;
 
 
 // Background
@@ -50,9 +57,11 @@ $color-input-border: $black;
 
 // Shadow
 
-$color-shadow-primary: $black-20;
+$color-shadow-primary: 0 0 12px $black-20;
+$color-shadow-card: 0 0 12px 0 $black-25;
 $color-shadow-secondary: 0 5px 7px $white;
 $color-shadow: 0 2px 15px $grey;
+$color-shadow-tertiary: 0 4px 23px 0 $white-47;
 
 // Radius
 $radius-default: 10px;
@@ -66,6 +75,7 @@ $fz-default:                        16px;
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-play:                    "Play", "Arial", sans-serif;
+$ff-righteous:               "Righteous", "Arial", sans-serif;
 
 
 // Animation

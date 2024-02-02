@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
   }
 }
 
@@ -28,13 +29,17 @@
   background-color: transparent;
   height: 40px;
   width: 40px;
-  background-image: url("../img/icon-burger.svg");
+  background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   color: $color-text-base;
 
   @include tablet {
     display: inline-flex;
+  }
+
+  @include mobile {
+    top: 20px;
   }
 }
 
@@ -46,106 +51,39 @@
   }
 
   @include mobile {
+    align-self: start;
     margin-bottom: 30px;
   }
 }
 
-.site-nav__list {
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+.site-nav__menu {
+  grid-column: 4 / 10;
 
-  @include mobile {
-    width: 100%;
-  }
-
-  &--menu {
-    grid-column: 4 / 10;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding-top: 10px;
-
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-      order: 1;
-    }
-
-    @include mobile {
-      gap: 15px;
-      margin-bottom: 30px;
-      margin-top: 0;
-    }
-  }
-
-  &--call {
-    grid-column: 10 / 13;
-    flex-direction: column;
-    align-items: end;
-    gap: 10px;
-
-    @include tablet {
-      grid-column: 8 / 12;
-    }
-
-    @include mobile {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-}
-
-.site-nav__item {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @include mobile {
-    width: 100%;
-  }
-}
-
-.site-nav__link {
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
-  background-size: 0 1px;
-  transition: background-size $trans-default;
-
-  &:hover {
-    background-size: 100% 1px;
-  }
-
-  &:focus {
-    background-size: 100% 1px;
-  }
-
-  &:active {
-    background-size: 100% 1px;
+  @include tablet {
+    order: 1;
   }
 
   @include mobile {
-    width: 100%;
-    text-align: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    order: 0;
   }
 }
+
+.site-nav__call {
+  grid-column: 10 / 13;
+}
+
 
 .site-nav--closed .site-nav__toggler {
-  background-image: url("../img/icon-close.svg");
+  background-image: url("../img/icon-burger.svg");
 }
 
-.site-nav--closed .site-nav__list--menu {
+.site-nav--closed .site-nav__menu {
   @include tablet {
     display: none;
   }
 }
 
-.site-nav--closed .site-nav__list--call {
+.site-nav--closed .site-nav__call {
   @include mobile {
     display: none;
   }

@@ -1,0 +1,10 @@
+include ./card/card-data.pug
+include ./card/card.pug
+
+section#choice.choice
+  .container
+    .choice__wrapper
+      h2.choice__title Выбор тура
+      .choice__list
+        each val in card_data
+          +card(val)(class="choice__item")

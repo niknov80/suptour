@@ -2,17 +2,18 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {isWebP} from './utils/webp.js';
 import {detectedScript, toggleClickHandler} from './modules/menu.js';
 
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-
   iosVhFix();
   isWebP();
   detectedScript();
   toggleClickHandler();
+
 
   // Modules
   // ---------------------------------
@@ -21,9 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
 
 
-  // window.addEventListener('load', () => {
-  //
-  // });
+  window.addEventListener('load', () => {
+
+  });
 });
 
 

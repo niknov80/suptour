@@ -11,16 +11,6 @@
     opacity: 0.5;
     pointer-events: none;
   }
-
-  &:hover {
-    background-color: $color-button-bg;
-    color: $color-text-dark;
-  }
-
-  &:focus {
-    background-color: $color-button-bg;
-    color: $color-text-dark;
-  }
 }
 
 .btn--outline {
@@ -30,14 +20,20 @@
 
   &:hover {
     background-image: none;
+    background-color: $color-button-bg;
+    color: $color-text-dark;
   }
 
   &:focus {
     background-image: none;
+    background-color: $color-button-bg;
+    color: $color-text-dark;
   }
 
   &:active {
     background-image: none;
+    background-color: $color-button-bg;
+    color: $color-text-dark;
   }
 
   @include mobile {
@@ -52,6 +48,37 @@
   border: none;
   color: $color-text-dark;
   filter: drop-shadow($color-shadow);
+  justify-content: center;
 
   padding: 19px 35px 21px;
+
+  &:hover {
+    background-color: $color-button-bg-hover;
+  }
+}
+
+.btn--card {
+  @include text-play-15-17-400;
+
+  background-color: $color-button-bg-hover;
+  border: none;
+  color: $color-text-dark;
+
+  padding-top: 17px;
+  padding-bottom: 17px;
+  width: 100%;
+  justify-content: center;
+
+
+  &:hover {
+    background-color: $orange-87;
+  }
+
+  &:focus {
+    background-color: $orange-87;
+  }
+
+  &:active {
+    background-color: $orange-87;
+  }
 }

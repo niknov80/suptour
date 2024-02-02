@@ -1,0 +1,8 @@
+mixin card(cardData)
+  .card&attributes(attributes)
+    h3.card__title= cardData.title
+    small.card__age= cardData.age
+    p.card__description= cardData.desc
+    strong.card__price= cardData.price
+      span  р/чел
+    a.card__button.btn.btn--card Забронировать

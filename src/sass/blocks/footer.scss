@@ -1,0 +1,29 @@
+.footer {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+}
+
+.footer__phone {
+  @include text-play-18-21-400;
+
+  transition: opacity $trans-default;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.6;
+  }
+}
