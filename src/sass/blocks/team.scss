@@ -186,10 +186,18 @@
 
   &:nth-child(3) {
     order: 3;
+
+    @include mobile {
+      order: 2;
+    }
   }
 
   &:nth-child(4) {
     order: 2;
+
+    @include mobile {
+      order: 3;
+    }
   }
 
   &:nth-child(5) {

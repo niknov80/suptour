@@ -16,26 +16,30 @@ const closeMenu = () => {
 };
 
 export const toggleClickHandler = () => {
-  toggle.addEventListener('click', () => {
-    toggleMenu();
-    if (body.classList.contains('scroll-lock')) {
-      sc.enableScrolling();
-    } else {
-      sc.disableScrolling();
-    }
-  });
-
-  menu.addEventListener('click', (evt) => {
-    if (body.classList.contains('scroll-lock')) {
-      if (evt.target.className === 'menu__link') {
-        closeMenu();
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      toggleMenu();
+      if (body.classList.contains('scroll-lock')) {
         sc.enableScrolling();
+      } else {
+        sc.disableScrolling();
       }
-    }
-  });
+    });
+
+    menu.addEventListener('click', (evt) => {
+      if (body.classList.contains('scroll-lock')) {
+        if (evt.target.className === 'menu__link') {
+          closeMenu();
+          sc.enableScrolling();
+        }
+      }
+    });
+  }
 };
 
 export const detectedScript = () => {
-  menu.classList.remove('no-js');
-  menu.classList.add('site-nav--closed');
+  if (menu) {
+    header.classList.remove('no-js');
+    menu.classList.add('site-nav--closed');
+  }
 };

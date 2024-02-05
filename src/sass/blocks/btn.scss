@@ -66,6 +66,8 @@
 
   padding-top: 17px;
   padding-bottom: 17px;
+  padding-left: 15px;
+  padding-right: 15px;
   width: 100%;
   justify-content: center;
 
@@ -80,5 +82,38 @@
 
   &:active {
     background-color: $orange-87;
+  }
+}
+
+.btn--send {
+  @include text-play-15-17-400;
+
+  display: inline-flex;
+  justify-content: center;
+  background-color: transparent;
+  color: $color-text-base;
+  padding: 17px 55px;
+  border: 1px solid $color-button-bg-send;
+  transition:
+    color $trans-default,
+    background-color $trans-default;
+
+  &:hover {
+    background-color: $color-button-bg-hover;
+    color: $color-text-dark;
+  }
+
+  &:focus {
+    background-color: $color-button-bg-hover;
+    color: $color-text-dark;
+  }
+
+  &:active {
+    background-color: $color-button-bg-hover;
+    color: $color-text-dark;
+  }
+
+  @include mobile {
+    width: 100%;
   }
 }

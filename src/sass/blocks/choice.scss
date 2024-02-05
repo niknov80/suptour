@@ -1,24 +1,49 @@
 .choice {
+  position: relative;
   padding-top: 75px;
-  padding-bottom: 75px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: $dark-grey;
+  padding-bottom: 105px;
+  background-position-y: 25%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 4.69%, rgba(0, 0, 0, 0.2) 26.04%, rgba(0, 0, 0, 0.2) 30.73%, rgba(0, 0, 0, 0.17) 42.19%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.37) 32.26%, rgba(0, 0, 0, 0) 100%) rgba(141, 141, 141, 0.94);
+    z-index: 1;
+  }
 }
 
 .no-webp .choice {
-  background-image: url("../img/common/choice.jpeg");
+  background: url("../img/common/section-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include retina {
-    background-image: url("../img/common/choice@2x.jpg");
+    background-image: url("../img/common/section-bg@2x.jpg");
   }
 }
 
 .webp .choice {
-  background-image: url("../img/common/choice.webp");
+  background-image: url("../img/common/section-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include retina {
-    background-image: url("../img/common/choice@2x.webp");
+    background-image: url("../img/common/section-bg@2x.webp");
   }
 }
 
@@ -36,6 +61,7 @@
   text-shadow: 0 0 13px $black;
   margin-top: 0;
   margin-bottom: 80px;
+  z-index: 10;
 
   &::before {
     content: "";

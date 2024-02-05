@@ -1,0 +1,43 @@
+.form-request form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+}
+
+.form-request__input {
+  width: 100%;
+}
+
+.form-request__input input {
+  @include text-play-17-20-400;
+
+  background-color: transparent;
+  color: $color-form-primary;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $color-form-primary;
+  box-shadow: none;
+
+  &::placeholder {
+    color: $color-form-primary;
+  }
+}
+
+.form-request__input .is-invalid {
+  @include text-play-14-15-400;
+
+  color: $color-form-error;
+}
+
+.form-request__input .is-valid {
+  @include text-play-14-15-400;
+
+  color: $color-form-valid;
+}
+
+.form__button {
+  margin-top: 25px;
+}

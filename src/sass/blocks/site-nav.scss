@@ -70,8 +70,11 @@
 
 .site-nav__call {
   grid-column: 10 / 13;
-}
 
+  @include tablet {
+    grid-column: 8 / 12;
+  }
+}
 
 .site-nav--closed .site-nav__toggler {
   background-image: url("../img/icon-burger.svg");
@@ -86,5 +89,21 @@
 .site-nav--closed .site-nav__call {
   @include mobile {
     display: none;
+  }
+}
+
+.no-js .site-nav {
+  padding-bottom: 35px;
+}
+
+.no-js .site-nav__toggler {
+  display: none;
+}
+
+.no-js .site-nav__call {
+  grid-column: 10 / 13;
+
+  @include tablet {
+    grid-column: 8 / 13;
   }
 }

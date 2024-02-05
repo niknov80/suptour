@@ -7,6 +7,7 @@ $black-20: rgba(0, 0, 0, 0.2);
 $black-25: rgba(0, 0, 0, 0.35);
 $black-87: rgba(0, 0, 0, 0.87);
 $red: #ff121f;
+$green: #008000;
 $yellow: #ffff00;
 $orange: #ffbf1a;
 $orange-87: rgba(255, 191, 26, 0.87);
@@ -34,6 +35,7 @@ $color-text-light: $light-grey;
 $color-button-border: $white;
 $color-button-bg: $white;
 $color-button-bg-solid: $orange-87;
+$color-button-bg-send: $orange;
 $color-button-bg-hover: $yellow;
 
 
@@ -52,13 +54,14 @@ $color-icon-bg: $white;
 
 $color-form-primary: $white;
 $color-form-error: $red;
+$color-form-valid: $green;
 $color-input-border: $black;
 
 
 // Shadow
 
 $color-shadow-primary: 0 0 12px $black-20;
-$color-shadow-card: 0 0 12px 0 $black-25;
+$color-shadow-card: 0 12px 9px 5px $black-25;
 $color-shadow-secondary: 0 5px 7px $white;
 $color-shadow: 0 2px 15px $grey;
 $color-shadow-tertiary: 0 4px 23px 0 $white-47;

@@ -1,7 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {isWebP} from './utils/webp.js';
 import {detectedScript, toggleClickHandler} from './modules/menu.js';
-
+import {sliderInit} from './modules/slider.js';
+import {calcFeatureRows} from './modules/features.js';
+import {Form} from './modules/form-validate/form';
 
 // ---------------------------------
 
@@ -23,7 +25,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   window.addEventListener('load', () => {
-
+    const form = new Form();
+    window.form = form;
+    form.init();
+    sliderInit();
+    calcFeatureRows();
   });
 });
 

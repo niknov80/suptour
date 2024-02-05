@@ -1,0 +1,136 @@
+.features {
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 60px;
+  background-position-y: 25%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.49) linear-gradient(138.96deg, rgba(0, 0, 0, 0.2) 63.62%, rgba(0, 0, 0, 0) 70.23%);
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(160.35deg, rgba(0, 0, 0, 0.2) 24.95%, rgba(0, 0, 0, 0.16) 50.62%, rgba(0, 0, 0, 0) 61.24%) rgba(196, 196, 196, 0.8);
+    z-index: 1;
+  }
+}
+
+.no-webp .features {
+  background: url("../img/common/section-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/common/section-bg@2x.jpg");
+  }
+}
+
+.webp .features {
+  background-image: url("../img/common/section-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/common/section-bg@2x.webp");
+  }
+}
+
+.features__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: $vp-1370;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 75px;
+
+  @include vp1099 {
+    padding: 0 50px;
+  }
+
+  @include tablet {
+    padding: 0 45px;
+  }
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
+.features__title {
+  @include title-2;
+
+  letter-spacing: -0.08em;
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: 10;
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(var(--columns-count), 1fr);
+  grid-template-rows: repeat(var(--rows-count), min-content);
+  grid-auto-flow: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px 30px 20px;
+  column-gap: 40px;
+  row-gap: 30px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: $radius-default;
+
+  @include tablet {
+    row-gap: 20px;
+  }
+}
+
+.features__subtitle {
+  @include description;
+
+  position: relative;
+  margin-top: 70px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -25px;
+    height: 2px;
+    width: 130px;
+    background-color: $orange;
+  }
+
+  @include tablet {
+    margin-top: 50px;
+  }
+}
+
+.features__description {
+  @include text-play-17-20-400;
+
+  padding-right: 85px;
+  margin-left: 0;
+
+  @include vp1099 {
+    padding-right: 0;
+  }
+
+  @include tablet {
+    @include text-play-15-17-400;
+  }
+}
