@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper no-webp">
     <header class="header no-js">
       <div class="container">
         <div class="site-nav" data-burger-menu>
@@ -119,7 +119,7 @@
             <div class="team__picture-wrap">
               <div class="team__picture">
                 <picture>
-                  <source srcset="./img/content/team.webp" type="image/webp">
+                  <source srcset="./img/content/team.webp 1x, ./img/content/team@2x.webp 2x" type="image/webp">
                   <img class="team__image" width="494" height="530" src="./img/content/team.jpg" srcset="./img/content/team@2.jpg 2x" alt="Девушка на supboard на гребне волны">
                 </picture>
               </div>
@@ -171,6 +171,107 @@
           </div>
         </div>
       </section>
+      <section class="gallery" id="gallery">
+        <div class="container">
+          <div class="gallery__wrapper">
+            <div class="gallery__description">
+              <h2 class="gallery__title">Просмотрите галерею</h2>
+              <p class="gallery__text">С нами вы так же сможете наслаждаться пейзажами и получать удовольствие от прогулки</p>
+              <a class="gallery__button btn btn--solid">Забронировать</a>
+            </div>
+            <div class="gallery__slider slider">
+              <div class="slider__wrapper swiper">
+                <div class="swiper-wrapper">
+                  <div class="slider__slide swiper-slide">
+                    <picture>
+                      <source srcset="./img/content/gallery.webp 1x, ./img/content/gallery@2x.webp 2x" type="image/webp">
+                      <img class="slider__image" width="660" height="430" src="./img/content/gallery.jpg" srcset="./img/content/gallery@2.jpg 2x" alt="Девушка на supboard на гребне волны">
+                    </picture>
+                  </div>
+                  <div class="slider__slide swiper-slide">
+                    <picture>
+                      <source srcset="./img/content/gallery.webp 1x, ./img/content/gallery@2x.webp 2x" type="image/webp">
+                      <img class="slider__image" width="660" height="430" src="./img/content/gallery.jpg" srcset="./img/content/gallery@2.jpg 2x" alt="Девушка на supboard на гребне волны">
+                    </picture>
+                  </div>
+                  <div class="slider__slide swiper-slide">
+                    <picture>
+                      <source srcset="./img/content/gallery.webp 1x, ./img/content/gallery@2x.webp 2x" type="image/webp">
+                      <img class="slider__image" width="660" height="430" src="./img/content/gallery.jpg" srcset="./img/content/gallery@2.jpg 2x" alt="Девушка на supboard на гребне волны">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <button class="slider__arrow slider__arrow--prev" type="button">
+                <svg width="32" height="30">
+                  <use xlink:href="img/sprite.svg#arrow-left"></use>
+                </svg>
+              </button>
+              <button class="slider__arrow slider__arrow--next" type="button">
+                <svg width="32" height="30">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features" id="features">
+        <div class="features__wrapper">
+          <h2 class="features__title">Наши преимущества</h2>
+          <dl class="features__list" style="--rows-count:6; --columns-count:3;">
+            <dt class="features__subtitle">Подходит новичкам и профессионалам</dt>
+            <dd class="features__description">Мы всему научим! Возраст, пол и ваш навык не имеют значения.</dd>
+            <dt class="features__subtitle">Мы любим ваших животных</dt>
+            <dd class="features__description">Ваша собака скучает дома? Берите ее на прогулку с собой</dd>
+            <dt class="features__subtitle">Комфорт и сопровождение</dt>
+            <dd class="features__description">Вы можете положить свои вещи в лодку нашего инструктора.</dd>
+            <dt class="features__subtitle">Перенос прогулки</dt>
+            <dd class="features__description">Вы можете перенести прогулку на другую дату</dd>
+            <dt class="features__subtitle">Лучшее оборудование</dt>
+            <dd class="features__description">Мы закупаем снаряжение только у высококлассных производителей.</dd>
+            <dt class="features__subtitle">Разнообразие маршрутов</dt>
+            <dd class="features__description">Мы постоянно генерируем идеи для новых прогулок. Нам важно удивить вас!</dd>
+          </dl>
+        </div>
+      </section>
+      <section class="form" id="form">
+        <div class="container">
+          <div class="form__wrapper">
+            <div class="form__container">
+              <h2 class="form__title">Остались вопросы?</h2>
+              <p class="form__description">Оставьте заявку и наш менеджер свяжется с вами в течении 15 минут</p>
+              <div class="form__form-request form-request" data-callback="base" data-form-validate="data-form-validate">
+                <form method="post" action="#">
+                  <div class="form-request__input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required="data-required">
+                    <label for="name">
+                      <input id="name" name="name" type="text" placeholder="Имя">
+                    </label>
+                  </div>
+                  <div class="form-request__input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="data-required">
+                    <label for="phone">
+                      <input id="phone" name="phone" type="text" placeholder="Номер телефона">
+                    </label>
+                  </div>
+                  <button class="form__button btn btn--send" type="submit">Отправить</button>
+                </form>
+              </div>
+              <p class="form__caption">Заполняя форму вы соглашаетесь с нашей<a href="#"> Политикой конфиденциальности</a>
+              </p>
+            </div>
+            <div class="form__picture-wrap">
+              <div class="form__pic">
+                <div class="form__picture">
+                  <picture>
+                    <source srcset="./img/content/form.webp 1x, ./img/content/form@2x.webp 2x" type="image/webp">
+                    <img width="460" height="416" src="./img/content/form.jpg" srcset="./img/content/form@2.jpg 2x" alt="Девушка на supboard на гребне волны">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -183,10 +284,10 @@
               <a class="footer-menu__link" href="#about">О нас</a>
             </li>
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">Услуги</a>
+              <a class="footer-menu__link" href="#team">Услуги</a>
             </li>
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">Контакты</a>
+              <a class="footer-menu__link" href="#form">Контакты</a>
             </li>
             <li class="footer-menu__item">
               <a class="footer-menu__link" href="#choice">Выбор тура</a>
