@@ -8,10 +8,6 @@
   align-items: end;
   gap: 10px;
 
-  @include tablet {
-    grid-column: 8 / 12;
-  }
-
   @include mobile {
     display: flex;
     flex-direction: column;

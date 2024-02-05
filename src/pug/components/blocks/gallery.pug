@@ -1,0 +1,28 @@
+section#gallery.gallery
+  .container
+    .gallery__wrapper
+      .gallery__description
+        h2.gallery__title Просмотрите галерею
+        p.gallery__text С нами вы так же сможете наслаждаться пейзажами и получать удовольствие от прогулки
+        a.gallery__button.btn.btn--solid Забронировать
+      .gallery__slider.slider
+        .slider__wrapper.swiper
+          .swiper-wrapper
+            .slider__slide.swiper-slide
+              picture
+                source(srcset="./img/content/gallery.webp 1x, ./img/content/gallery@2x.webp 2x", type="image/webp")
+                img.slider__image(width="660", height="430", src="./img/content/gallery.jpg", srcset="./img/content/gallery@2.jpg 2x", alt="Девушка на supboard на гребне волны")
+            .slider__slide.swiper-slide
+              picture
+                source(srcset="./img/content/gallery.webp 1x, ./img/content/gallery@2x.webp 2x", type="image/webp")
+                img.slider__image(width="660", height="430", src="./img/content/gallery.jpg", srcset="./img/content/gallery@2.jpg 2x", alt="Девушка на supboard на гребне волны")
+            .slider__slide.swiper-slide
+              picture
+                source(srcset="./img/content/gallery.webp 1x, ./img/content/gallery@2x.webp 2x", type="image/webp")
+                img.slider__image(width="660", height="430", src="./img/content/gallery.jpg", srcset="./img/content/gallery@2.jpg 2x", alt="Девушка на supboard на гребне волны")
+        button.slider__arrow.slider__arrow--prev(type="button")
+          svg(width=32, height=30)
+            use(xlink:href="img/sprite.svg#arrow-left")
+        button.slider__arrow.slider__arrow--next(type="button")
+          svg(width=32, height=30)
+            use(xlink:href="img/sprite.svg#arrow-right")

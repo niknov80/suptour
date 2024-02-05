@@ -1,0 +1,50 @@
+.slider {
+  overflow: hidden;
+  position: relative;
+  border-radius: $radius-default;
+}
+
+.slider__slide img {
+  width: 100%;
+}
+
+.slider__arrow {
+  position: absolute;
+  display: inline-flex;
+  box-sizing: border-box;
+  top: 52%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  cursor: pointer;
+
+  &--prev {
+    left: 25px;
+  }
+
+  &--next {
+    right: 25px;
+  }
+
+  &:hover {
+    transform: scale(1.1) translateY(-50%);
+  }
+
+  &:focus {
+    outline: 2px solid $orange;
+    border-radius: 50%;
+    transform: scale(1.1) translateY(-50%);
+  }
+
+  &:active {
+    transform: scale(1.1) translateY(-50%);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}

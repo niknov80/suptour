@@ -6,6 +6,7 @@
   border-radius: $radius-default;
   box-shadow: $color-shadow-card;
   padding: 45px 20px;
+  z-index: 10;
 }
 
 .card__title {

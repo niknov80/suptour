@@ -1,0 +1,23 @@
+section#form.form
+  .container
+    .form__wrapper
+      .form__container
+        h2.form__title Остались вопросы?
+        p.form__description Оставьте заявку и наш менеджер свяжется с вами в течении 15 минут
+        .form__form-request.form-request(data-callback="base" data-form-validate="data-form-validate")
+          form(method="post" action="#")
+            .form-request__input(data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required="data-required")
+              label(for="name")
+                input(id="name" name="name" type="text" placeholder="Имя")
+            .form-request__input(data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="data-required")
+              label(for="phone")
+                input(id="phone" name="phone" type="text" placeholder="Номер телефона")
+            button.form__button.btn.btn--send(type="submit") Отправить
+        p.form__caption Заполняя форму вы соглашаетесь с нашей
+          a(href="#")  Политикой конфиденциальности
+      .form__picture-wrap
+        .form__pic
+          .form__picture
+            picture
+              source(srcset="./img/content/form.webp 1x, ./img/content/form@2x.webp 2x", type="image/webp")
+              img(width="460", height="416", src="./img/content/form.jpg", srcset="./img/content/form@2.jpg 2x", alt="Девушка на supboard на гребне волны")
