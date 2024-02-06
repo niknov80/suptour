@@ -1,8 +1,16 @@
 .hero {
   min-height: 830px;
 
+  @include vp1099 {
+    min-height: 650px;
+  }
+
   @include tablet {
     min-height: unset;
+  }
+
+  @include mobile {
+    padding-bottom: 50px;
   }
 }
 
@@ -32,6 +40,14 @@
   column-gap: 40px;
   padding-top: 260px;
   padding-bottom: 50px;
+
+  @include vp1099 {
+    padding-top: 220px;
+  }
+
+  @include tablet {
+    padding-bottom: 0;
+  }
 
   @include mobile {
     display: flex;

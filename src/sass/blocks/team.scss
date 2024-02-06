@@ -23,9 +23,9 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
 
-  @include tablet {
+  @include vp1099 {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -41,28 +41,18 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 2px;
-    width: 137px;
-    background-color: $orange-40;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
     height: 137px;
-    width: 2px;
-    background-color: $orange-40;
+    width: 137px;
+    border-right: 2px solid $orange-40;
+    border-bottom: 2px solid $orange-40;
+    background-color: transparent;
   }
 
-  @include tablet {
-    order: 1;
+  @include vp1099 {
     padding-right: 0;
     padding-bottom: 0;
     width: 100%;
 
-    &::before,
     &::after {
       display: none;
     }
@@ -74,14 +64,14 @@
   border-radius: $radius-default;
   overflow: hidden;
 
-
   max-width: 494px;
   max-height: 530px;
   margin-left: 15px;
 
-  @include tablet {
+  @include vp1099 {
     max-width: 100%;
     max-height: 100%;
+    margin-left: 0;
   }
 
   @include mobile {
@@ -95,7 +85,7 @@
   object-fit: cover;
 }
 
-.team__description {
+.team__block {
   grid-column: 2 / 3;
 }
 
@@ -106,6 +96,7 @@
   margin-top: 48px;
   margin-bottom: 45px;
   letter-spacing: -0.09em;
+  color: $color-text-light;
 
   &::before {
     content: "";
@@ -116,6 +107,11 @@
     width: 94%;
     height: 158px;
     border-radius: $radius-default;
+  }
+
+  @include vp1099 {
+    margin-top: 30px;
+    margin-bottom: 60px;
   }
 
   @include tablet {
@@ -145,9 +141,10 @@
   counter-reset: li;
   row-gap: 85px;
 
-  @include tablet {
+  @include vp1099 {
     row-gap: 30px;
-    padding-bottom: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 40px;
   }
 
   @include mobile {
@@ -166,6 +163,7 @@
   display: flex;
   align-items: end;
   gap: 5px;
+  color: $color-text-light;
 
   &::before {
     content: counter(li);
@@ -174,6 +172,7 @@
     color: transparent;
     -webkit-text-stroke: 1px $orange;
     font-family: $ff-righteous;
+    width: 40px;
   }
 
   &:nth-child(1) {
@@ -187,7 +186,7 @@
   &:nth-child(3) {
     order: 3;
 
-    @include mobile {
+    @include vp1099 {
       order: 2;
     }
   }
@@ -195,7 +194,7 @@
   &:nth-child(4) {
     order: 2;
 
-    @include mobile {
+    @include vp1099 {
       order: 3;
     }
   }

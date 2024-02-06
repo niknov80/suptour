@@ -24,6 +24,11 @@
     background: linear-gradient(245.92deg, rgba(0, 0, 0, 0.36) 31.93%, rgba(0, 0, 0, 0.36) 41.1%, rgba(0, 0, 0, 0) 68.04%) rgba(196, 196, 196, 0.82);
     z-index: 1;
   }
+
+  @include vp1099 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .no-webp .form {
@@ -51,7 +56,11 @@
 .form__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 100px;
+  column-gap: 110px;
+
+  @include vp1099 {
+    column-gap: 30px;
+  }
 
   @include tablet {
     display: flex;
@@ -71,6 +80,10 @@
   padding-left: 30px;
   padding-right: 85px;
 
+  @include vp1099 {
+    padding: 30px 30px 40px;
+  }
+
   @include tablet {
     max-width: unset;
     padding-right: 30px;
@@ -83,6 +96,10 @@
   margin-top: 0;
   margin-bottom: 45px;
   padding-left: 5px;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
 }
 
 .form__description {
@@ -91,11 +108,21 @@
   margin-top: 0;
   margin-bottom: 35px;
   padding-left: 5px;
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
 }
 
 .form__form-request {
   margin-left: 5px;
   margin-bottom: 15px;
+}
+
+.form-request__input input:focus {
+  outline: 1px solid $color-text-base;
+  border-radius: $radius-default;
+  border-bottom: none;
 }
 
 .form__caption {
@@ -116,8 +143,6 @@
   justify-content: end;
   align-items: start;
   position: relative;
-  padding-left: 10px;
-  padding-bottom: 10px;
   z-index: 10;
 
   @include tablet {
@@ -126,26 +151,11 @@
     padding-bottom: 0;
     padding-left: 0;
     width: 100%;
-
-    &::before,
-    &::after {
-      display: none;
-    }
   }
 }
 
 .form__pic {
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -95px;
-    left: -100px;
-    height: 2px;
-    width: 137px;
-    background-color: $orange;
-  }
 
   &::before {
     content: "";
@@ -153,15 +163,17 @@
     bottom: -95px;
     left: -100px;
     height: 137px;
-    width: 2px;
-    background-color: $orange;
+    width: 137px;
+    border-bottom: 2px solid $orange;
+    border-left: 2px solid $orange;
+    background-color: transparent;
   }
 
-  @include tablet {
+  @include vp1099 {
+    height: 100%;
     width: 100%;
 
-    &::before,
-    &::after {
+    &::before {
       display: none;
     }
   }
@@ -173,7 +185,8 @@
   overflow: hidden;
   max-width: 460px;
 
-  @include tablet {
+  @include vp1099 {
+    height: 100%;
     max-width: 100%;
     max-height: 100%;
   }

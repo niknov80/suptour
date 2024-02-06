@@ -25,6 +25,11 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.37) 32.26%, rgba(0, 0, 0, 0) 100%) rgba(141, 141, 141, 0.94);
     z-index: 1;
   }
+
+  @include vp1099 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .no-webp .choice {
@@ -82,12 +87,21 @@
     width: 60px;
     background-color: $orange;
   }
+
+  @include vp1099 {
+    margin-bottom: 40px;
+  }
 }
 
 .choice__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
+
+  @include vp1099 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 
   @include tablet {
     display: flex;

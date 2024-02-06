@@ -7,6 +7,10 @@
   box-shadow: $color-shadow-card;
   padding: 45px 20px;
   z-index: 10;
+
+  @include mobile {
+    padding: 20px;
+  }
 }
 
 .card__title {
@@ -23,6 +27,8 @@
 
   @include mobile {
     @include text-play-22-26-400;
+
+    margin-bottom: 10px;
   }
 }
 
@@ -37,7 +43,7 @@
 }
 
 .card__description {
-  @include text-play-23-27-400;
+  @include description;
 
   position: relative;
   color: $light-grey;
@@ -54,22 +60,31 @@
     top: -35px;
     transform: translateX(-50%);
     background-color: $orange;
+
+    @include mobile {
+      top: -25px;
+    }
   }
 
   @include mobile {
     @include text-play-16-19-400;
+    margin-top: 45px;
     margin-bottom: 45px;
   }
 }
 
 .card__price {
-  @include text-play-35-35-400;
+  @include text-play-16-10-400;
 
   margin-top: auto;
   color: $white;
-  margin-bottom: 55px;
+  margin-bottom: 60px;
+
+  @include mobile {
+    margin-bottom: 35px;
+  }
 }
 
-.card__price span {
-  @include text-play-16-10-400;
+.card__price strong {
+  @include text-play-35-35-400;
 }

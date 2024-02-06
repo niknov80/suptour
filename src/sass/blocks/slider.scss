@@ -21,6 +21,7 @@
   padding: 0;
   font-size: 1px;
   cursor: pointer;
+  transition: all $trans-default;
 
   &--prev {
     left: 25px;

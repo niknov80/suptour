@@ -25,6 +25,11 @@
     background: linear-gradient(160.35deg, rgba(0, 0, 0, 0.49) 25.19%, rgba(0, 0, 0, 0.38) 51.11%, rgba(0, 0, 0, 0) 61.84%) rgba(196, 196, 196, 0.82);
     z-index: 1;
   }
+
+  @include vp1099 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .no-webp .gallery {
@@ -68,22 +73,12 @@
   }
 }
 
-.gallery__description {
+.gallery__container {
   position: relative;
   max-width: 365px;
   padding-right: 25px;
   padding-bottom: 40px;
   z-index: 10;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 2px;
-    width: 143px;
-    background-color: $yellow;
-  }
 
   &::after {
     content: "";
@@ -91,8 +86,10 @@
     bottom: 0;
     right: 0;
     height: 143px;
-    width: 2px;
-    background-color: $yellow;
+    width: 143px;
+    border-bottom: 2px solid $yellow;
+    border-right: 2px solid $yellow;
+    background-color: transparent;
   }
 
   @include vp1099 {
@@ -100,7 +97,9 @@
   }
 
   @include mobile {
-    &::before,
+    padding-right: 0;
+    padding-bottom: 0;
+
     &::after {
       display: none;
     }
